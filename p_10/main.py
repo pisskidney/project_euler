@@ -17,17 +17,17 @@ def get_sieve(n):
     return sieve
 
 
-def get_sum_primes_upto_2000000():
+def get_sum_primes_upto(n):
     sum = 0
-    primes = get_sieve(2000000)
-    for x in xrange(1, 2000000):
+    primes = get_sieve(n)
+    for x in xrange(1, n):
         if x not in primes:
             sum += x
     print sum
 
 
 def main():
-    get_sum_primes_upto_2000000()
+    get_sum_primes_upto(200000)
 
 
 if __name__ == "__main__":
